@@ -1,74 +1,64 @@
-# Welcome to your Lovable project
+# 🗂️ Sistema Kanban – Gestão de Projetos
 
-## Project info
+Este é um projeto acadêmico da disciplina **Jornada**, desenvolvido em grupo pelos estudantes:
 
-**URL**: https://lovable.dev/projects/9e5dd95d-0747-49c4-bf1d-7203ac1d9700
+- **Guilherme Oliveira** – Design da interface e criação de componentes visuais  
+- **Daniel Silva** – Implementação do drag‑and‑drop e lógica de cards  
+- **Mateus Brito** – Gerenciamento de estado com Zustand e integração com localStorage  
+- **Dereck Felipe Maciel Pereira** – Organização da estrutura de pastas e estilos com Tailwind CSS  
+- **Rafael Teixeira Romero** – Configuração do projeto, documentação e deploy
 
-## How can I edit this code?
+---
 
-There are several ways of editing your application.
+## 🎯 Sobre o projeto
 
-**Use Lovable**
+O sistema foi desenvolvido como **entrega para a empresa Valmet**, com o objetivo de demonstrar um protótipo funcional de Kanban para potencial uso em gerenciamento de tarefas internas.
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/9e5dd95d-0747-49c4-bf1d-7203ac1d9700) and start prompting.
+A **Valmet** é uma empresa global com forte atuação nas indústrias de celulose, papel e energia, fornecendo soluções de processos e automação para plantas industriais. Com mais de 200 anos de história e presença em todo o mundo, incluindo centros no Brasil (Araucária‑PR, Sorocaba‑SP etc.), a Valmet se destaca por desenvolver tecnologias para otimização de processos industriais e controle de fluxo.
 
-Changes made via Lovable will be committed automatically to this repo.
+---
 
-**Use your preferred IDE**
+## ⚙️ Funcionamento do sistema
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+O **Sistema Kanban** permite:
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+- **Criar, editar e remover colunas e cartões (cards)**;  
+- **Arrastar e soltar (drag‑and‑drop)** tarefas entre colunas, proporcionando organização dinâmica;  
+- **Salvar o estado automaticamente** no `localStorage` (persistência entre sessões no mesmo navegador);  
+- **Interface responsiva**, adaptável a diferentes tamanhos de tela, com uso de Tailwind CSS, React e TypeScript para desempenho e clareza de código.
 
-Follow these steps:
+---
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+## 📁 Tecnologias utilizadas
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+- React + TypeScript: estrutura e interatividade  
+- Vite: bundler leve para desenvolvimento rápido  
+- Tailwind CSS: estilos utilitários modernos  
+- Zustand: gerenciamento de estado simples e eficiente  
+- clsx, lucide‑react e outras bibliotecas de apoio
 
-# Step 3: Install the necessary dependencies.
-npm i
+---
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+## 📝 Contexto da disciplina “Jornada”
 
-**Edit a file directly in GitHub**
+A disciplina **Jornada**, parte do currículo do curso, exige o desenvolvimento de um projeto em parceria com uma empresa real.  
+Este Kanban foi pensado para uso em **gestão de tarefas operacionais e de manutenção**, alinhado com os processos típicos da Valmet — como acompanhamento de ordens de serviço, controle de fluxo de trabalho entre equipes, e visualização de status em tempo real.
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+---
 
-**Use GitHub Codespaces**
+## 🤝 Entrega para a Valmet
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+O protótipo representa uma solução leve e de rápida implementação, adequada a um ambiente industrial como o da Valmet, oferecendo:
 
-## What technologies are used for this project?
+- **Visualização clara do fluxo de tarefas** por fase (Ex.: “A Fazer”, “Fazendo”, “Concluído”);  
+- **Flexibilidade para adaptação** a rotinas empresariais reais;  
+- **Base para futuras integrações**, como registro de responsáveis, prazos e sincronização com ferramentas como ERP ou SCADA, alinhadas com os serviços de automação da Valmet :contentReference[oaicite:3]{index=3}.
 
-This project is built with:
+---
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+## 👨‍💻 Autores
 
-## How can I deploy this project?
+Desenvolvido por:  
+**Guilherme Oliveira**, **Daniel Silva**, **Mateus Brito**, **Dereck Felipe Maciel Pereira** e **Rafael Teixeira Romero** — em parceria acadêmica para a Valmet.
 
-Simply open [Lovable](https://lovable.dev/projects/9e5dd95d-0747-49c4-bf1d-7203ac1d9700) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
-# KANBAN
+---
