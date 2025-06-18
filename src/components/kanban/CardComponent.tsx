@@ -42,27 +42,31 @@ export const CardComponent = ({ card, onUpdateCard, onDeleteCard, darkMode }: Ca
   };
 
   return (
-    <div className="bg-white dark:bg-gray-750 rounded-lg border border-gray-200 dark:border-gray-600 shadow-sm hover:shadow-md transition-shadow cursor-pointer">
+    <div className="group bg-white dark:bg-gray-750 rounded-lg border border-gray-200 dark:border-gray-600 shadow-sm hover:shadow-md transition-shadow cursor-pointer">
       <div className="p-4">
         <div className="flex items-start justify-between mb-3">
-          <h4 className="font-medium text-gray-900 dark:text-white text-sm leading-tight">
+          <h4 className="font-medium text-gray-900 dark:text-white text-sm leading-tight flex-1 pr-2">
             {card.title}
           </h4>
           
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
-              <Button variant="ghost" size="sm" className="h-6 w-6 p-0 opacity-0 group-hover:opacity-100 hover:opacity-100">
+              <Button 
+                variant="ghost" 
+                size="sm" 
+                className="h-6 w-6 p-0 opacity-100 hover:bg-gray-100 dark:hover:bg-gray-600 flex-shrink-0"
+              >
                 <MoreVertical className="w-3 h-3" />
               </Button>
             </DropdownMenuTrigger>
-            <DropdownMenuContent align="end">
-              <DropdownMenuItem onClick={() => setIsEditOpen(true)}>
+            <DropdownMenuContent align="end" className="w-40">
+              <DropdownMenuItem onClick={() => setIsEditOpen(true)} className="cursor-pointer">
                 <Edit2 className="w-4 h-4 mr-2" />
                 Editar
               </DropdownMenuItem>
               <DropdownMenuItem 
                 onClick={handleDeleteCard}
-                className="text-red-600 dark:text-red-400"
+                className="text-red-600 dark:text-red-400 cursor-pointer"
               >
                 <Trash2 className="w-4 h-4 mr-2" />
                 Excluir
