@@ -1,6 +1,6 @@
 
 import { useState } from 'react';
-import { Plus, Moon, Sun, Download, Users } from 'lucide-react';
+import { Plus, Moon, Sun, Download } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog';
@@ -132,12 +132,6 @@ export const Header = ({
             >
               {darkMode ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
             </Button>
-
-            {/* User Info */}
-            <div className="flex items-center space-x-2 text-sm text-gray-600 dark:text-gray-300">
-              <Users className="w-4 h-4" />
-              <span>Operador</span>
-            </div>
           </div>
         </div>
       </div>
