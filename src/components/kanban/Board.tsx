@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { DragDropContext, Droppable, DropResult } from '@hello-pangea/dnd';
 import { Plus } from 'lucide-react';
@@ -180,7 +179,7 @@ export const Board = ({ board, onUpdateBoard, darkMode }: BoardProps) => {
           {/* Add Column Button */}
           <div className="flex-shrink-0">
             <Button
-              variant="dashed"
+              variant="outline"
               className="w-80 h-12 border-2 border-dashed border-gray-300 dark:border-gray-600 hover:border-gray-400 dark:hover:border-gray-500 touch-friendly"
               onClick={() => setIsCreateColumnOpen(true)}
             >

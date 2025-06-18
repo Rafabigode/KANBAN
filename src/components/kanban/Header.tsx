@@ -1,11 +1,11 @@
-
 import { useState } from 'react';
-import { Plus, Moon, Sun, Download } from 'lucide-react';
+import { Plus, Moon, Sun, FileSpreadsheet } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog';
 import { Input } from '@/components/ui/input';
 import { KanbanBoard } from '../../pages/Index';
+import * as XLSX from 'xlsx';
 
 interface HeaderProps {
   boards: KanbanBoard[];
@@ -46,6 +46,47 @@ export const Header = ({
       link.click();
       URL.revokeObjectURL(url);
     }
+  };
+
+  const exportToExcel = () => {
+    if (!currentBoard) return;
+
+    // Prepare data for Excel
+    const worksheetData: any[] = [];
+    
+    // Add headers
+    worksheetData.push(['Coluna', 'Título do Cartão', 'Descrição', 'Tags', 'Prioridade', 'Data de Criação', 'Data de Conclusão']);
+    
+    // Add data for each column and card
+    currentBoard.columns.forEach(column => {
+      if (column.cards.length === 0) {
+        // Add column even if it has no cards
+        worksheetData.push([column.title, '', '', '', '', '', '']);
+      } else {
+        column.cards.forEach(card => {
+          worksheetData.push([
+            column.title,
+            card.title,
+            card.description || '',
+            card.tags.join(', '),
+            card.priority,
+            new Date(card.createdAt).toLocaleDateString('pt-BR'),
+            card.completedAt ? new Date(card.completedAt).toLocaleDateString('pt-BR') : ''
+          ]);
+        });
+      }
+    });
+
+    // Create workbook and worksheet
+    const workbook = XLSX.utils.book_new();
+    const worksheet = XLSX.utils.aoa_to_sheet(worksheetData);
+    
+    // Add the worksheet to the workbook
+    XLSX.utils.book_append_sheet(workbook, worksheet, 'Kanban Board');
+    
+    // Generate Excel file and download
+    const fileName = `${currentBoard.title.replace(/\s+/g, '_')}_kanban.xlsx`;
+    XLSX.writeFile(workbook, fileName);
   };
 
   return (
@@ -121,6 +162,18 @@ export const Header = ({
             >
               <Download className="w-4 h-4 mr-2" />
               Exportar
+            </Button>
+
+            {/* Export to Excel */}
+            <Button 
+              variant="outline" 
+              size="sm" 
+              onClick={exportToExcel}
+              disabled={!currentBoard}
+              className="touch-friendly"
+            >
+              <FileSpreadsheet className="w-4 h-4 mr-2" />
+              Exportar Excel
             </Button>
 
             {/* Dark Mode Toggle */}
