@@ -1,73 +1,46 @@
-# Welcome to your Lovable project
+# 🗂️ Sistema Kanban – Gestão de Projetos
 
-## Project info
+Este é um projeto acadêmico da disciplina **Jornada**, desenvolvido em grupo pelos estudantes:
 
-**URL**: https://lovable.dev/projects/b305d03b-0441-4e17-8a3a-a9ef85a55697
+- **Guilherme Oliveira** – Design da interface e criação de componentes visuais  
+- **Daniel Silva** – Implementação do drag‑and‑drop e lógica de movimentação de cards  
+- **Mateus Brito** – Integração avançada de estado com Zustand, persistência com localStorage e arquitetura interna  
+- **Dereck Felipe Maciel Pereira** – Organização da estrutura de pastas e estilização com Tailwind CSS  
+- **Rafael Teixeira Romero** – Configuração do projeto, documentação, deploy e apresentação final
 
-## How can I edit this code?
+---
 
-There are several ways of editing your application.
+## 🎯 Sobre o Projeto
 
-**Use Lovable**
+O sistema foi desenvolvido como entrega para a empresa **Valmet**, com o objetivo de apresentar um protótipo funcional de Kanban, voltado ao **gerenciamento de tarefas internas**.
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/b305d03b-0441-4e17-8a3a-a9ef85a55697) and start prompting.
+> A **Valmet** é uma empresa global com forte atuação nas indústrias de celulose, papel e energia, fornecendo soluções de processos e automação para plantas industriais. Com mais de 200 anos de história e presença mundial (incluindo unidades em Araucária‑PR, Sorocaba‑SP, entre outras), destaca-se no desenvolvimento de tecnologias para otimização e controle de processos.
 
-Changes made via Lovable will be committed automatically to this repo.
+---
 
-**Use your preferred IDE**
+## ⚙️ Funcionalidades
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+✅ Criar, editar e excluir **colunas** e **cards**  
+✅ Mover tarefas com **drag-and-drop** intuitivo  
+✅ **Persistência automática** com `localStorage`  
+✅ **Gerenciamento de estado global** com Zustand  
+✅ Interface moderna, **responsiva** e de fácil usabilidade
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+---
 
-Follow these steps:
+## 🧪 Tecnologias Utilizadas
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+- ⚛️ React + TypeScript – estrutura e componentes  
+- ⚡ Vite – ambiente de desenvolvimento rápido  
+- 🎨 Tailwind CSS – estilização com classes utilitárias  
+- 🧠 Zustand – gerenciamento de estado (configuração técnica elaborada por Mateus Brito)  
+- 🛠️ Outras libs: `clsx`, `lucide-react`, entre outras
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+---
 
-# Step 3: Install the necessary dependencies.
-npm i
+## 🚀 Como Rodar Localmente
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
-
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/b305d03b-0441-4e17-8a3a-a9ef85a55697) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+1. Clone o repositório:
+   ```bash
+   git clone https://github.com/Rafabigode/KANBAN.git
+   cd KANBAN
